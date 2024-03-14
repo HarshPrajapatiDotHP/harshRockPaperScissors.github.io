@@ -1,0 +1,127 @@
+:root {
+    --main-1: #7B4B01;
+    --main-2: #FB9902;
+    --main-3: #FCB547;
+    --main-4: #FEE2B8;
+}
+
+@font-face {
+    font-family: game-font;
+    src: url(fonts/ARCADECLASSIC.TTF);
+}
+
+@font-face {
+    font-family: winner-font;
+    src: url(fonts/Constance-7BLXE.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100vw;
+}
+
+header h1 {
+    font-family: game-font;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--main-1);
+    -webkit-box-reflect: below -36px linear-gradient(to top, rgb(123, 75, 1), rgba(123, 75, 1, 0.5), rgba(123, 75, 1, 0.3), rgba(123, 75, 1, 0.2), rgba(123, 75, 1, 0.1), rgba(123, 75, 1, 0), rgba(0, 0, 0, 0));
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 30px;
+}
+
+.main img {
+    cursor: pointer;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background: var(--main-3);
+    box-shadow: 0 10px 10px var(--main-1);
+}
+
+.main img:active {
+    transform: scale(1.1);
+}
+
+#show-winner {
+    color: var(--main-1);
+    font-family: winner-font;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0 auto;
+    width: 50vmin;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1.5px solid var(--main-1);
+    padding: 15px 30px;
+    background: var(--main-3);
+    box-shadow: 2px 2px 0px var(--main-1);
+    /* -webkit-box-reflect: below 1px linear-gradient(to top, #7B4B01, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); */
+}
+
+.score-board h5 {
+    color: var(--main-1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.score-board div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.score-board div div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--main-4);
+    background: var(--main-1);
+    box-shadow: 2px 2px 0px var(--main-1);
+}
+
+.score-board div div h4 {
+    color: var(--main-4);
+    font-size: 1.5rem;
+    font-family: ms sans serif;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
