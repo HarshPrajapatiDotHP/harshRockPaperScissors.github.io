@@ -2,6 +2,9 @@ let buttons = document.querySelectorAll('.button');
 let showWinner = document.getElementById('show-winner');
 let userScorePara = document.getElementById('user-score');
 let cpuScorePara = document.getElementById('cpu-score');
+let winSound = document.getElementById('win-sound');
+let loseSound = document.getElementById('lose-sound');
+let tieSound = document.getElementById('tie-sound');
 
 let userScore = 0;
 let cpuScore = 0;
@@ -48,10 +51,12 @@ const result = (userwin) => {
         userScore = userScore + 1;
         showWinner.innerHTML = 'Congratulation! you win.'
         userScorePara.innerHTML = userScore;
+        winSound.play();
     } else {
         cpuScore = cpuScore + 1;
         showWinner.innerHTML = 'Oops! you lose'
         cpuScorePara.innerHTML = cpuScore;
+        loseSound.play();
     }
 }
 
@@ -60,6 +65,7 @@ const result = (userwin) => {
 
 // funtion for draw match
 const drawMatch = () => {
+    tieSound.play();
     showWinner.innerHTML = 'Match draw';
 }
 
